@@ -556,6 +556,15 @@ void solve()
 				window.close();
 				break;
 			}
+			if (ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Space)
+			{
+				Stil_In_this = 1;
+				cnt_bombe = 0;
+				v.clear();
+				af.clear();
+				citire_generare();
+				afis(v);
+			}
 			if (nrcst())
 			{
 				cout << "BINE BAAAAA";
@@ -582,7 +591,7 @@ void solve()
 					if (Stil_In_this == 0)
 					{
 						rapadunga = 1;
-						if (af[x][y] > 0)
+						if (af[x][y] > 0 && af[x][y] != smn)
 						{
 							int a, b;
 							vector<pair<int, int>>t;
