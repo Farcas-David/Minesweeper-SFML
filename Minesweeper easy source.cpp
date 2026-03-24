@@ -400,7 +400,7 @@ bool verif_bombe_cu_cele_de_pe_afis(int x, int y)
 		int a = x + dx[i];
 		int b = y + dy[i];
 		if (fits(a, b))
-			if (af[a][b] == -1 && v[a][b] != -1)
+			if (v[a][b] == -1 && af[a][b] != -1)
 				return 0;
 	}
 	return 1;
