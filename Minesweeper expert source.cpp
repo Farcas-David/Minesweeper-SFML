@@ -88,7 +88,12 @@ void draw_table(vector<vector<int>>& a, sf::RenderWindow& window)
 	text7.setFillColor(sf::Color(64, 64, 64));
 	text8.setFillColor(sf::Color(0, 0, 0));
 	sf::Texture texture1, texture2;
-	texture1.loadFromFile("unopened.png");
+	if (nrcst() == true) {
+		texture1.loadFromFile("STEAG.png");
+	}
+	else {
+		texture1.loadFromFile("unopened.png");
+	}
 	texture2.loadFromFile("STEAG.png");
 	sf::Sprite sprite1, sprite2;
 	sprite1.setTexture(texture1);
